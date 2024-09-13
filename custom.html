@@ -8,51 +8,7 @@
 <link rel="preload" href="./custom_files/minified-9b6fc03f3303dcbd348ce3d701a521cd.css" as="style">
 <link rel="preload" href="./custom_files/minified-f25982bb15efdaf315799375df905ea4.css" as="style">
 <link rel="preload" href="./custom_files/minified-4cc93401bf7706ff1ba75059cfcd198f.css" as="style">
-<script type="text/javascript" id="www-widgetapi-script" src="./custom_files/www-widgetapi.js.download" async=""></script><script async="" src="./custom_files/iframe_api"></script><script nonce="">
-//<![CDATA[
-var vice= { config: { viceAccountId: 'blackrock', viceSiteId: 'blackrockprod', viceZoneId: '', viceSectionId: '' } }
-//]]>
-</script>
-<script src="./custom_files/blackrockprod"></script><script async="" integrity="sha384-RgoyLjUjd7gvoFY3qaKwRv55hezZuIqafaM22Os3uBrdVFCSXgOyptuc8dK66bv2" crossorigin="anonymous" data-vice-loading-stage="0" data-vice-on="1" src="./custom_files/bolt.js.download"></script><link rel="preload" as="script" integrity="sha384-fLZA2gJDUuORrqDjYIwGxrdXMD8OmwDS6EkVq6VcR56k4esPsTGUYTTZboc2r3MT" crossorigin="anonymous" href="./custom_files/1.23.5.14"><script async="" src="./custom_files/1.23.5.14" importance="high" integrity="sha384-fLZA2gJDUuORrqDjYIwGxrdXMD8OmwDS6EkVq6VcR56k4esPsTGUYTTZboc2r3MT" crossorigin="anonymous"></script>
-<script nonce="">
-//<![CDATA[
-var ASSET_PREFIX_PATH='/uk-retail-c-assets/';
-window['adrum-start-time'] = new Date().getTime();
-var BLK = { deferredFunctions: [], ready: function(f) { BLK.deferredFunctions.push(f); } };
-//]]>
-</script>
-<script nonce="">
-//<![CDATA[
-try {
-if ("requestStorageAccessFor" in document) { //checks if the browser supports the experimental function
-const targetSites = ['https://websdkmetrics.blackrock.com', 'https://securemetrics.blackrock.com', 'https://sourcedefense.blackrock.com'];
-for (const targetSite of targetSites) {
-navigator.permissions.query({name: 'top-level-storage-access', requestedOrigin: targetSite})
-.then(req => {
-if (req.state == 'granted') {
-// Permission has already been granted, You can request storage access without any user gesture
-document.requestStorageAccessFor(targetSite)
-} else if (req.state != 'prompt') {
-throw ('Storage access is denied by requestedOrigin')
-}
-})
-}
-} else console.info("Your browser doesn't support the inclusion of 3rd party cookies. If you want to allow this feature please switch to an up-to-date Chromium based browser. For full browser compatibility please check https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccessFor#browser_compatibility")
-} catch (e) {
-console.error('relatedWebsites.ftl', e)
-}
-//]]>
-</script>
-<script nonce="">
-//<![CDATA[
-(function(){
-if (typeof BLK === "undefined" || !BLK) {
-window.BLK = {};
-}
-BLK["isAtmos"] = true;
-})();
-//]]>
-</script>
+<link rel="preload" as="script" integrity="sha384-fLZA2gJDUuORrqDjYIwGxrdXMD8OmwDS6EkVq6VcR56k4esPsTGUYTTZboc2r3MT" crossorigin="anonymous" href="./custom_files/1.23.5.14">
 <link rel="stylesheet" href="./custom_files/minified-5cdc3bb322c40d28e9a2833bd4122ed8.css">
 <link rel="stylesheet" href="./custom_files/minified-acba810e34f67ffe20411de380ccd12.css">
 <link rel="stylesheet" href="./custom_files/minified-f84de9d606585f7a1d12f7982103f0d4.css">
@@ -60,110 +16,8 @@ BLK["isAtmos"] = true;
 <link rel="stylesheet" href="./custom_files/minified-9b6fc03f3303dcbd348ce3d701a521cd.css">
 <link rel="stylesheet" href="./custom_files/minified-f25982bb15efdaf315799375df905ea4.css">
 <link rel="stylesheet" href="./custom_files/minified-4cc93401bf7706ff1ba75059cfcd198f.css">
-<script src="./custom_files/minified-d1508d80e3f1a38ecfe2451cf131fbca.js.download" defer="defer"></script>
-<script src="./custom_files/minified-30a84f1f3574e16590d27c5b438eded5.js.download" defer="defer"></script>
-<script src="./custom_files/minified-490d8664d2fd66c31c3805e5dd23dcfe.js.download" defer="defer"></script>
-<script src="./custom_files/minified-77b6b39110753ff6b86d222b5df8dafc.js.download" defer="defer"></script>
-<script src="./custom_files/minified-72d0f949e5ea485fec5b0c589ebb9a84.js.download" defer="defer"></script>
-<script src="./custom_files/minified-984e95a0cd3fb4d83769c134c31bc719.js.download" defer="defer"></script>
-<script src="./custom_files/minified-408adcf90bd6d1dc71b2ae72d0083ce9.js.download" defer="defer"></script>
-<script src="./custom_files/minified-fa3d2947ec47a67ce4fc8c9bb43dd3af.js.download" defer="defer"></script>
-<script src="./custom_files/minified-5ca9fb338cd8db246b4cdef962bf98a3.js.download" defer="defer"></script>
-<script src="./custom_files/minified-2d80d14b6406872f96e1c8793b9d194c.js.download" defer="defer"></script>
-<script src="./custom_files/minified-6b4e35eabd5dcefbb8da8babf1fd754a.js.download" defer="defer"></script>
-<script src="./custom_files/minified-8fa6575a4fba9d3dfc38de9209e854f5.js.download" defer="defer"></script>
-<script src="./custom_files/minified-fdd6741f9db009aa4ff9b8eee994b143.js.download" defer="defer"></script>
-<script src="./custom_files/minified-81241d4b16d0906ea722414c05fa7552.js.download" defer="defer"></script>
-<script src="./custom_files/minified-d53babd4201543da50d8c90c7f1c6326.js.download" defer="defer"></script>
-<script src="./custom_files/minified-741cb6c0823e817a4bc4803d47c5b23e.js.download" defer="defer"></script>
-<script src="./custom_files/minified-b70246adbee249051165987f2ab405ce.js.download" defer="defer"></script>
 <title>Investment Management &amp; Financial Services | BlackRock</title>
-<script src="./custom_files/otSDKStub.js.download" defer="defer" charset="UTF-8" data-domain-script="1d844f07-6416-4f37-97e9-e7e8b80732f2" data-document-language="true"></script>
-<script nonce="">
-//<![CDATA[
-var adobe_report_suite_id,adobe_portfolio_id,adobe_ticker,adobe_product_type,adobe_logged_in,adobe_logged_out,adobe_registration_submitted,partner_name,partner_user_id,partner_firm_name,ignore_adobe_for_user;
-adobe_report_suite_id='blk-global-prod,blk-uk-one-prod';
-var globalAnalyticsParams = {
-googleSiteId: "UA-11733486-12",
-envNet: "dmz",
-envType: "prod",
-pageName: "index",
-siteName: "uk-one",
-country: "gb",
-languageSelector: "en",
-isInternalTraffic: "false",
-isInternalLogin: "false",
-siteSection: "home",
-siteSubSection: "home",
-siteSubSubSection: "home",
-padlockedContent: "yes",
-webTrackingId: "",
-loggedIn: "no",
-analyticsAllowed: "false",
-enableAbTesting: "true"
-};
-var NTPT_GLBLEXTRA = "site=uk-one"
-+ "&env=prod"
-+ "&language=en"
-+ "&country=" + globalAnalyticsParams.country
-+ "&usertype=individual"
-+ "&investorType="
-+ "&un="
-+ "&loggedin=no"
-+ "&firm=" + encodeURIComponent("")
-+ "&pagename=" + encodeURIComponent(globalAnalyticsParams.pageName)
-+ "&cc1=" + encodeURIComponent("home")
-+ "&cc2=" + encodeURIComponent("home")
-+ "&cc3=" + encodeURIComponent("home")
-+ "&padlocked=yes"
-;
-function getCookie(name) {
-var value = "; " + document.cookie;
-var parts = value.split("; " + name + "=");
-if (parts.length == 2) return parts.pop().split(";").shift();
-}
-globalAnalyticsParams.bannerAcceptBtn= "not listening"
-globalAnalyticsParams.pcAllowAllBtn= "not listening"
-globalAnalyticsParams.pcSaveBtn = "not listening"
-OptanonWrapper = function() {
-console.log("OptanonWrapper called");
-var OABCcookieName = "OptanonAlertBoxClosed";
-var bannerAcceptBtn = document.getElementById("onetrust-accept-btn-handler");
-var pcAllowAllBtn = document.getElementById("accept-recommended-btn-handler");
-var pcSaveBtn = document.getElementsByClassName("save-preference-btn-handler onetrust-close-btn-handler")[0];
-var OABCcookie = getCookie(OABCcookieName);
-if (!OABCcookie && bannerAcceptBtn && globalAnalyticsParams.bannerAcceptBtn =="not listening") {
-bannerAcceptBtn.addEventListener('click', function(event){
-utag.link(
-{ "link_name": "Allowed all via Banner" }
-);
-});
-globalAnalyticsParams.bannerAcceptBtn="listening";
-}
-if (pcAllowAllBtn && globalAnalyticsParams.pcAllowAllBtn=="not listening"){
-pcAllowAllBtn.addEventListener('click', function(event){
-utag.link(
-{ "link_name": "Allowed all via Preference Center" }
-);
-});
-globalAnalyticsParams.pcAllowAllBtn="listening";
-}
-if (pcSaveBtn && globalAnalyticsParams.pcSaveBtn=="not listening"){
-pcSaveBtn.addEventListener('click', function(event){
-utag.link(
-{ "link_name": "Set custom settings via Preference Center" }
-);
-});
-globalAnalyticsParams.pcSaveBtn="listening"
-}
-}
-BLK.isCwpUserSignedIn = false;
-BLK.siteName = "uk-one";
-BLK.apiGatewayUrl = "https://www.blackrock.com/api-gateway";
-BLK.apigeePath = "https://api.blackrock.com";
-//]]>
-</script>
-<script src="./custom_files/utag.js.download" type="text/javascript" defer="defer"></script>
+
 <meta name="cmsPageId" content="1576905876222">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="BlackRock is one of the world’s preeminent asset management firms and a premier provider of investment management. Find out more information here.">
@@ -223,8 +77,10 @@ BLK.apigeePath = "https://api.blackrock.com";
 <meta property="og:url" content="https://www.blackrock.com/uk">
 <link rel="canonical" href="https://www.blackrock.com/uk">
 <!--ComplianceID = MKTGM0824E/S-3788674-->
-<script src="./custom_files/minified-998bec00516f585b37ec8f5b06eb56d3.js.download" defer="defer"></script>
-<script nonce="">bazadebezolkohpepadr="1508398435"</script><script type="text/javascript" src="./custom_files/59e8560c" nonce="" defer=""></script><iframe src="./custom_files/saved_resource.html" style="visibility: hidden;position: absolute;height: 0px; width: 0px" width="0" height="0"></iframe><iframe src="./custom_files/saved_resource(1).html" style="visibility: hidden;position: absolute;height: 0px; width: 0px" width="0" height="0"></iframe><style type="text/css">.vjs-youtube .vjs-iframe-blocker { display: none; }.vjs-youtube.vjs-user-inactive .vjs-iframe-blocker { display: block; }.vjs-youtube .vjs-poster { background-size: cover; }.vjs-youtube-mobile .vjs-big-play-button { display: none; }</style><script type="text/javascript" async="" charset="utf-8" id="tiqapp" src="./custom_files/utag.v.js.download"></script><script src="./custom_files/otBannerSdk.js.download" async="" type="text/javascript"></script><style id="csp_vLARRY_LETTER" nonce="">#vLARRY_LETTER 
+
+<iframe src="./custom_files/saved_resource.html" style="visibility: hidden;position: absolute;height: 0px; width: 0px" width="0" height="0"></iframe><iframe src="./custom_files/saved_resource(1).html" style="visibility: hidden;position: absolute;height: 0px; width: 0px" width="0" height="0"></iframe>
+
+<style id="csp_vLARRY_LETTER" nonce="">#vLARRY_LETTER 
  .vjs-poster { background-image: url("https://d2adqanfijfsj5.cloudfront.net/thumbs/LARRY_LETTER.852x480.jpg?time=1726234496614"); }
 #vLARRY_LETTER 
  .vjs-text-track-display div { position: absolute; inset: 0px; margin: 1.5%; }
@@ -403,7 +259,9 @@ list-style-position:outside;
                             background-color: #F8F8F8;
                         }
                     
-            .ot-floating-button__front{background-image:url('https://cdn.cookielaw.org/logos/static/ot_persistent_cookie_icon.png')}</style><script defer="" src="./custom_files/reporter.js.download" main="sourceDefenseReporter" sdi="" limit="1000" integrity="sha384-ki340/bm+L8Yo6CJXcj3noUwf+050E83r0wgobTvHXMIp3TIbGqHFChu4AO2kk8C" crossorigin="anonymous"></script></head>
+            .ot-floating-button__front{background-image:url('https://cdn.cookielaw.org/logos/static/ot_persistent_cookie_icon.png')}</style>
+            
+        </head>
 <body id="uk-one" class="blkPage ds-non-ishares-site page-class-index blk-responsive en_GB" tabindex="-1" data-new-gr-c-s-check-loaded="14.1195.0" data-gr-ext-installed="">
 <div class="ls-canvas content-page-wide-12">
 <div class="ls-row body-background" id="bodyWrapper" role="main">
@@ -587,7 +445,7 @@ FUNDS AT BLACKROCK
 
  
 </div>
-<noscript><img src="https://www.blackrock.com/akam/13/pixel_59e8560c?a=dD1mMjM5OTI3MTA5OWQ4OTUyY2I4YTFlMTU1MDM0YzJlYjdhZTFhNzdhJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" nonce="" src="./custom_files/PYntxS2kB"></script>
+<noscript><img src="https://www.blackrock.com/akam/13/pixel_59e8560c?a=dD1mMjM5OTI3MTA5OWQ4OTUyY2I4YTFlMTU1MDM0YzJlYjdhZTFhNzdhJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
 <div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="onetrust-consent-sdk"><div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div><div id="onetrust-pc-sdk" class="otPcCenter ot-hide ot-fade-in otRelFont" lang="en" aria-label="Preference center" role="region"><div role="alertdialog" aria-modal="true" aria-describedby="ot-pc-desc" style="height: 100%;" aria-label="Manage your cookies"><!-- Close Button --><div class="ot-pc-header"><!-- Logo Tag --><div class="ot-pc-logo" role="img" aria-label="Company Logo"><img alt="Company Logo" src="./custom_files/blackrock-logo-nav.png"></div><button id="close-pc-btn-handler" class="ot-close-icon" aria-label="Close" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);"></button></div><!-- Close Button --><div id="ot-pc-content" class="ot-pc-scrollbar"><div class="ot-optout-signal ot-hide"><div class="ot-optout-icon"><svg xmlns="http://www.w3.org/2000/svg"><path class="ot-floating-button__svg-fill" d="M14.588 0l.445.328c1.807 1.303 3.961 2.533 6.461 3.688 2.015.93 4.576 1.746 7.682 2.446 0 14.178-4.73 24.133-14.19 29.864l-.398.236C4.863 30.87 0 20.837 0 6.462c3.107-.7 5.668-1.516 7.682-2.446 2.709-1.251 5.01-2.59 6.906-4.016zm5.87 13.88a.75.75 0 00-.974.159l-5.475 6.625-3.005-2.997-.077-.067a.75.75 0 00-.983 1.13l4.172 4.16 6.525-7.895.06-.083a.75.75 0 00-.16-.973z" fill="#FFF" fill-rule="evenodd"></path></svg></div><span></span></div><h2 id="ot-pc-title">Manage your cookies</h2><div id="ot-pc-desc" ncwce="true">Cookies enhance your experience on BlackRock’s websites and help us show you more relevant content. Some are necessary and always active.
 
 <p> By clicking “Accept all”, you’re agreeing to the placement and use of cookies as described in our Cookie Policy. “Required only” means only Necessary and Statistical analytics (wherever applicable) cookies are active. You can always change your preferences by clicking “Manage cookies” at the bottom of any page.
