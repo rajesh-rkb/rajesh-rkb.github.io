@@ -3,10 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-aue-resource="urn:aemconnection:/content/dam/blackrock/uk/landing/temp-cf/jcr:content/data/master" data-aue-type="reference">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p data-aue-prop="reactlabel" data-aue-type="text">
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
