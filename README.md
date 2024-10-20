@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Universal Editor Sample App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Using the Sample App
+This Sample App is hosted at https://ue-remote-app.adobe.net.
+Per Default the content is retrieved and written back to our Production Demo Environment:
+```
+authorHost=https://author-p7452-e12433.adobeaemcloud.com
+publishHost=https://publish-p7452-e12433.adobeaemcloud.com
+```
+If you'd like to retrieve content from another environment add authorHost & publishHost as query parameters, e.g.
+
+[https://ue-remote-app.adobe.net?authorHost=https://author-p15902-e145656-cmstg.adobeaemcloud.com&publishHost=https://publish-p15902-e145656-cmstg.adobeaemcloud.com](https://ue-remote-app.adobe.net?authorHost=https://author-p15902-e145656-cmstg.adobeaemcloud.com&publishHost=https://publish-p15902-e145656-cmstg.adobeaemcloud.com)
+
+respectively if run on local dev environment:
+
+[https://localhost:3000?authorHost=https://author-p15902-e145656-cmstg.adobeaemcloud.com&publishHost=https://publish-p15902-e145656-cmstg.adobeaemcloud.com](https://localhost:3000?authorHost=https://author-p15902-e145656-cmstg.adobeaemcloud.com&publishHost=https://publish-p15902-e145656-cmstg.adobeaemcloud.com)
+
+
+## Prerequisites 
+
+- AEMCS instance is available
+- WKND project is installed on the instance
+- CORS enabled on AEM instance for the app
+- For local development with editor, ensure app is using *https*
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://localhost:3000](https://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `yarn build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Builds the app for production to the `build` folder.
+Utilize a gulp task to bundle all the JS and CSS files in the static build folder into the single main `index.html` file.
+This is useful for having the `index.html` bundle file automatically deployed on `https://ue-remote-app.adobe.net` when pushing new changes on the `main` branch.
 
-### `npm run build`
+This command is executed automatically before each commit by the `pre-commit` script.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Automatic deployment flow
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application uses the husky package (https://www.npmjs.com/package/husky), for adding a pre-commit script, located in the  `.husky` folder.
+The `pre-commit` script will be run before each commit. It will build the project and will add the build bundle from `build/index.html` to the commit.
+We expose this bundle to GitHub. This is happening due to the usage of internal artifactory packages (we cannot build the project on a deployment environment).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The flow is that we build the application locally and deploy the bundle through GitHub workflow to https://ue-remote-app.adobe.net, on each PR merged to the `main` branch.
 
-### `npm run eject`
+## Manual deployments
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+Install Netlify CLI
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm install netlify-cli -g`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Set the following environment variables in your terminal settings (for https://ue-remote-app.adobe.net):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`NETLIFY_AUTH_TOKEN = <authentication token>`
 
-## Learn More
+`NETLIFY_SITE_ID = <site id where to deploy>`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ ### Deploy commands
+Run in project root:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm run deploy` - deploy the app at any point to a non-production link, e.g https://62ff59a019923a6f7aec439d--prismatic-panda-c194c0.netlify.app/.
 
-### Code Splitting
+`npm run deploy prod` - deploy the app to the production link https://ue-remote-app.adobe.net (this is usually not needed, the application is automatically deployed on every PR merged to the `main` branch).
+ 
+If case of permission issues, run `chmod +x deploy/script.sh` at the root of the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

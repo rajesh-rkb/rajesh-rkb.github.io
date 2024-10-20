@@ -9,7 +9,17 @@
 /coverage
 
 # production
-/build
+/build/*.*
+/build/static/*
+!/build/manifest.json
+!/build/static/*.json
+!/build/fonts
+!/build/fonts.css
+!/build/static/media
+!/build/index.html
+
+#auth_credentials
+/src/auth
 
 # misc
 .DS_Store
@@ -21,3 +31,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.yalc
+
+# local Netlify folder
+.netlify
+
+# demo app
+auth/
+bin/
+lib/
+yalc.lock
+.idea/
